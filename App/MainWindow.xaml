@@ -1,0 +1,24 @@
+﻿<Window x:Class="AsyncProgramming.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AsyncProgramming"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Margin="10, 0" FontSize="28">Simple Async Demo App</TextBlock>
+        <Button x:Name="BtnExecSync" Margin="10" FontSize="18" Grid.Row="1" Click="OnExecSyncButtonClicked">Execute SYNC</Button>
+        <Button x:Name="BtnExecAsync" Margin="10" FontSize="18" Grid.Row="2"  Click="OnExecAsyncButtonClicked">Execute ASYNC</Button>
+        <Button x:Name="BtnExecParallelAsync" Margin="10" FontSize="18" Grid.Row="3"  Click="OnExecParallelAsyncButtonClicked">Execute ASYNC parallel</Button>
+        <TextBlock x:Name="TbxResult" Grid.Row="4" Margin="10"/>
+    </Grid>
+</Window>
